@@ -27,6 +27,7 @@
 #include <boost/filesystem/fstream.hpp>
 
 #include <misc/string.hpp>
+#include <vector>
 
 namespace fluo {
 namespace data {

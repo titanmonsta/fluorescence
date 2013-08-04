@@ -1,12 +1,14 @@
-﻿
-chcp 65001
-@echo off
+﻿:chcp 65001
+:@echo off
+echo on
+echo hello
 if "%~1"=="/?" if "%~2"=="" (
 	echo   ENU: Deploying and updating project envirement
 	echo   RUS: Развертывание и обновление окружения проекта
 	echo ∙
 	exit /b 0
 )
+echo hello
 setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 color F1
 call :folder "%~dp0"

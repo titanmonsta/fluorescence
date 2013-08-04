@@ -46,6 +46,9 @@
     <Filter Include="ui\targeting">
       <UniqueIdentifier>{09d47fe0-4890-42c4-80c6-9a5c79a4dad6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ui\python">
+      <UniqueIdentifier>{e8764f58-67d5-437c-ba4e-dcc5d0a43f06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\fluorescence\data\animdataloader.hpp">
@@ -198,9 +201,6 @@
     <ClInclude Include="..\..\src\fluorescence\world\overheadmessage.hpp">
       <Filter>world</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\world\particleeffect.hpp">
-      <Filter>world</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\world\playerwalkmanager.hpp">
       <Filter>world</Filter>
     </ClInclude>
@@ -313,9 +313,6 @@
       <Filter>ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\fontengine.hpp">
-      <Filter>ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\gumpactions.hpp">
       <Filter>ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\gumpmenu.hpp">
@@ -711,9 +708,6 @@
     <ClInclude Include="..\..\src\fluorescence\misc\patcherupdater.hpp">
       <Filter>misc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\xmlloader.hpp">
-      <Filter>ui</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\net\packets\bf\04_closegump.hpp">
       <Filter>net\packets\bf</Filter>
     </ClInclude>
@@ -729,16 +723,10 @@
     <ClInclude Include="..\..\src\fluorescence\net\packets\7c_objectpicker.hpp">
       <Filter>net\packets</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\components\basebutton.hpp">
-      <Filter>ui\components</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\button.hpp">
       <Filter>ui\components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\checkbox.hpp">
-      <Filter>ui\components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\components\clicklabel.hpp">
       <Filter>ui\components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\containerview.hpp">
@@ -751,9 +739,6 @@
       <Filter>ui\components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\lineedit.hpp">
-      <Filter>ui\components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\components\multitextureimage.hpp">
       <Filter>ui\components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\paperdollview.hpp">
@@ -774,9 +759,6 @@
     <ClInclude Include="..\..\src\fluorescence\ui\components\sysloglabel.hpp">
       <Filter>ui\components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\fluorescence\ui\components\warmodebutton.hpp">
-      <Filter>ui\components</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\components\worldview.hpp">
       <Filter>ui\components</Filter>
     </ClInclude>
@@ -788,6 +770,99 @@
     </ClInclude>
     <ClInclude Include="..\..\src\fluorescence\ui\gumpcomponent.hpp">
       <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\data\radarcolloader.hpp">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\9e_vendorselllist.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\9f_vendorselloffer.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\65_weather.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\d6_objectproperties.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\d6_objectpropertyrequest.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\dc_objectpropertieshash.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\net\packets\df_buff.hpp">
+      <Filter>net\packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\world\buffinfo.hpp">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\world\ingameparticleeffect.hpp">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\world\minimapblock.hpp">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\world\weathereffect.hpp">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\cancel.hpp">
+      <Filter>ui\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\help.hpp">
+      <Filter>ui\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\reload.hpp">
+      <Filter>ui\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\weather.hpp">
+      <Filter>ui\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\components\imagestate.hpp">
+      <Filter>ui\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\components\minimapview.hpp">
+      <Filter>ui\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\components\sectorview.hpp">
+      <Filter>ui\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\particles\baseparticleeffect.hpp">
+      <Filter>ui\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\render\minimaprenderer.hpp">
+      <Filter>ui\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modclient.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\moddata.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modui.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modworld.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pyclient.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pydata.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pygumpcomponentcontainer.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pystring.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pyworld.hpp">
+      <Filter>ui\python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\fluorescence\ui\python\scriptloader.hpp">
+      <Filter>ui\python</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -905,9 +980,6 @@
     <ClCompile Include="..\..\src\fluorescence\world\overheadmessage.cpp">
       <Filter>world</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\world\particleeffect.cpp">
-      <Filter>world</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\world\playerwalkmanager.cpp">
       <Filter>world</Filter>
     </ClCompile>
@@ -1002,9 +1074,6 @@
       <Filter>ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\fontengine.cpp">
-      <Filter>ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\gumpactions.cpp">
       <Filter>ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\gumpmenu.cpp">
@@ -1385,9 +1454,6 @@
     <ClCompile Include="..\..\src\fluorescence\misc\patcherupdater.cpp">
       <Filter>misc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\xmlloader.cpp">
-      <Filter>ui</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\net\packets\bf\04_closegump.cpp">
       <Filter>net\packets\bf</Filter>
     </ClCompile>
@@ -1403,16 +1469,10 @@
     <ClCompile Include="..\..\src\fluorescence\net\packets\7c_objectpicker.cpp">
       <Filter>net\packets</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\components\basebutton.cpp">
-      <Filter>ui\components</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\button.cpp">
       <Filter>ui\components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\checkbox.cpp">
-      <Filter>ui\components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\components\clicklabel.cpp">
       <Filter>ui\components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\containerview.cpp">
@@ -1425,9 +1485,6 @@
       <Filter>ui\components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\lineedit.cpp">
-      <Filter>ui\components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\components\multitextureimage.cpp">
       <Filter>ui\components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\paperdollview.cpp">
@@ -1448,9 +1505,6 @@
     <ClCompile Include="..\..\src\fluorescence\ui\components\sysloglabel.cpp">
       <Filter>ui\components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\fluorescence\ui\components\warmodebutton.cpp">
-      <Filter>ui\components</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\components\worldview.cpp">
       <Filter>ui\components</Filter>
     </ClCompile>
@@ -1462,6 +1516,87 @@
     </ClCompile>
     <ClCompile Include="..\..\src\fluorescence\ui\gumpcomponent.cpp">
       <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\data\radarcolloader.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\9e_vendorselllist.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\9f_vendorselloffer.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\65_weather.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\d6_objectproperties.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\d6_objectpropertyrequest.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\dc_objectpropertieshash.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\net\packets\df_buff.cpp">
+      <Filter>net\packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\world\ingameparticleeffect.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\world\minimapblock.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\world\weathereffect.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\cancel.cpp">
+      <Filter>ui\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\clientcommand.cpp">
+      <Filter>ui\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\help.cpp">
+      <Filter>ui\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\reload.cpp">
+      <Filter>ui\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\weather.cpp">
+      <Filter>ui\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\components\imagestate.cpp">
+      <Filter>ui\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\components\minimapview.cpp">
+      <Filter>ui\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\components\sectorview.cpp">
+      <Filter>ui\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\particles\baseparticleeffect.cpp">
+      <Filter>ui\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\render\minimaprenderer.cpp">
+      <Filter>ui\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pyclient.cpp">
+      <Filter>ui\python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pydata.cpp">
+      <Filter>ui\python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pygumpcomponentcontainer.cpp">
+      <Filter>ui\python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pystring.cpp">
+      <Filter>ui\python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pyworld.cpp">
+      <Filter>ui\python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fluorescence\ui\python\scriptloader.cpp">
+      <Filter>ui\python</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

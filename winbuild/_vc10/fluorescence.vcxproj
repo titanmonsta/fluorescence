@@ -34,6 +34,7 @@
     <ClInclude Include="..\..\src\fluorescence\data\ondemandfileloader.hpp" />
     <ClInclude Include="..\..\src\fluorescence\data\ondemandreadable.hpp" />
     <ClInclude Include="..\..\src\fluorescence\data\ondemandurlloader.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\data\radarcolloader.hpp" />
     <ClInclude Include="..\..\src\fluorescence\data\skillsloader.hpp" />
     <ClInclude Include="..\..\src\fluorescence\data\sound.hpp" />
     <ClInclude Include="..\..\src\fluorescence\data\soundloader.hpp" />
@@ -93,6 +94,7 @@
     <ClInclude Include="..\..\src\fluorescence\net\packets\54_playsound.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\55_logincomplete.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\5d_characterselect.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\65_weather.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\6c_target.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\6d_playmusic.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\6e_mobileanimation.hpp" />
@@ -111,6 +113,8 @@
     <ClInclude Include="..\..\src\fluorescence\net\packets\8c_serverredirect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\91_gameserverloginrequest.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\9b_helprequest.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\9e_vendorselllist.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\9f_vendorselloffer.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\a0_gameserverselect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\a1_statupdatehitpoints.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\a2_statupdatemana.hpp" />
@@ -141,7 +145,11 @@
     <ClInclude Include="..\..\src\fluorescence\net\packets\c7_osieffectextended.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\c8_updaterange.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\cc_localizedtextaffix.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\d6_objectproperties.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\d6_objectpropertyrequest.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\dc_objectpropertieshash.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\dd_compressedgumpmenu.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\net\packets\df_buff.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\e2_mobileanimation_sa.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\ef_seed.hpp" />
     <ClInclude Include="..\..\src\fluorescence\net\packets\f3_worldobject.hpp" />
@@ -164,49 +172,52 @@
     <ClInclude Include="..\..\src\fluorescence\ui\bitmask.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\cliprectmanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commandmanager.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\cancel.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\clientcommand.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\command.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\directionlight.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\disconnect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\effect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\emote.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\help.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\opengump.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\osieffect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\property.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\reload.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\say.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\speechentry.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\togglewarmode.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\commands\weather.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\whisper.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\yell.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\commands\zoom.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\alpharegion.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\background.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\components\basebutton.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\button.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\checkbox.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\components\clicklabel.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\containerview.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\image.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\components\imagestate.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\label.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\lineedit.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\components\multitextureimage.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\components\minimapview.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\paperdollview.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\propertylabel.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\radiobutton.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\scrollarea.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\scrollbar.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\components\sectorview.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\sysloglabel.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\components\warmodebutton.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\components\worldview.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\cursorimage.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\cursormanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\fontengine.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\gumpactions.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\gumpcomponent.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\gumpmenu.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\gumpmenus.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\macromanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\manager.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\particles\baseparticleeffect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\particles\emitter.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\particles\motionmodel.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\particles\particle.hpp" />
@@ -223,10 +234,21 @@
     <ClInclude Include="..\..\src\fluorescence\ui\particles\timelinepause.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\particles\timelinestatic.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\particles\xmlloader.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modclient.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\moddata.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modui.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\modworld.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pyclient.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pydata.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pygumpcomponentcontainer.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pystring.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\pyworld.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\python\scriptloader.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\containerrenderer.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\containerrenderqueue.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\material.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\materialinfo.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\ui\render\minimaprenderer.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\paperdollrenderer.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\paperdollrenderqueue.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\render\renderqueue.hpp" />
@@ -241,17 +263,18 @@
     <ClInclude Include="..\..\src\fluorescence\ui\textureprovider.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\uofont.hpp" />
     <ClInclude Include="..\..\src\fluorescence\ui\uofontprovider.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\ui\xmlloader.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\world\buffinfo.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\dynamicitem.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\effect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\ingameobject.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\world\ingameparticleeffect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\lightmanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\manager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\map.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\world\minimapblock.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\mobile.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\osieffect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\overheadmessage.hpp" />
-    <ClInclude Include="..\..\src\fluorescence\world\particleeffect.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\playerwalkmanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\sector.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\sectormanager.hpp" />
@@ -260,6 +283,7 @@
     <ClInclude Include="..\..\src\fluorescence\world\smoothmovementmanager.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\statics.hpp" />
     <ClInclude Include="..\..\src\fluorescence\world\syslog.hpp" />
+    <ClInclude Include="..\..\src\fluorescence\world\weathereffect.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\fluorescence\client.cpp" />
@@ -278,6 +302,7 @@
     <ClCompile Include="..\..\src\fluorescence\data\maploader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\data\maptexloader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\data\mobtypesloader.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\data\radarcolloader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\data\skillsloader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\data\sound.cpp" />
     <ClCompile Include="..\..\src\fluorescence\data\soundloader.cpp" />
@@ -330,6 +355,7 @@
     <ClCompile Include="..\..\src\fluorescence\net\packets\54_playsound.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\55_logincomplete.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\5d_characterselect.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\65_weather.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\6c_target.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\6d_playmusic.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\6e_mobileanimation.cpp" />
@@ -348,6 +374,8 @@
     <ClCompile Include="..\..\src\fluorescence\net\packets\8c_serverredirect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\91_gameserverloginrequest.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\9b_helprequest.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\9e_vendorselllist.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\9f_vendorselloffer.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\a0_gameserverselect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\a1_statupdatehitpoints.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\a2_statupdatemana.cpp" />
@@ -378,7 +406,11 @@
     <ClCompile Include="..\..\src\fluorescence\net\packets\c7_osieffectextended.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\c8_updaterange.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\cc_localizedtextaffix.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\d6_objectproperties.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\d6_objectpropertyrequest.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\dc_objectpropertieshash.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\dd_compressedgumpmenu.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\net\packets\df_buff.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\e2_mobileanimation_sa.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\ef_seed.cpp" />
     <ClCompile Include="..\..\src\fluorescence\net\packets\f3_worldobject.cpp" />
@@ -397,48 +429,52 @@
     <ClCompile Include="..\..\src\fluorescence\ui\bitmask.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\cliprectmanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commandmanager.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\cancel.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\clientcommand.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\command.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\directionlight.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\disconnect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\effect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\emote.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\help.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\opengump.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\osieffect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\property.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\reload.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\say.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\speechentry.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\togglewarmode.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\commands\weather.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\whisper.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\yell.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\commands\zoom.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\alpharegion.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\background.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\components\basebutton.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\button.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\checkbox.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\components\clicklabel.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\containerview.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\image.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\components\imagestate.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\label.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\lineedit.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\components\multitextureimage.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\components\minimapview.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\paperdollview.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\propertylabel.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\radiobutton.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\scrollarea.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\scrollbar.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\components\sectorview.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\sysloglabel.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\components\warmodebutton.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\components\worldview.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\cursorimage.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\cursormanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\fontengine.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\gumpactions.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\gumpcomponent.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\gumpmenu.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\gumpmenus.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\macromanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\manager.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\particles\baseparticleeffect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\particles\emitter.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\particles\motionmodel.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\particles\particleemitter.cpp" />
@@ -453,9 +489,16 @@
     <ClCompile Include="..\..\src\fluorescence\ui\particles\timelinepause.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\particles\timelinestatic.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\particles\xmlloader.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pyclient.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pydata.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pygumpcomponentcontainer.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pystring.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\pyworld.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\python\scriptloader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\containerrenderer.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\containerrenderqueue.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\material.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\ui\render\minimaprenderer.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\paperdollrenderer.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\paperdollrenderqueue.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\render\renderqueue.cpp" />
@@ -469,17 +512,17 @@
     <ClCompile Include="..\..\src\fluorescence\ui\texture.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\uofont.cpp" />
     <ClCompile Include="..\..\src\fluorescence\ui\uofontprovider.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\ui\xmlloader.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\dynamicitem.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\effect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\ingameobject.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\world\ingameparticleeffect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\lightmanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\manager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\map.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\world\minimapblock.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\mobile.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\osieffect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\overheadmessage.cpp" />
-    <ClCompile Include="..\..\src\fluorescence\world\particleeffect.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\playerwalkmanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\sector.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\sectormanager.cpp" />
@@ -488,6 +531,7 @@
     <ClCompile Include="..\..\src\fluorescence\world\smoothmovementmanager.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\statics.cpp" />
     <ClCompile Include="..\..\src\fluorescence\world\syslog.cpp" />
+    <ClCompile Include="..\..\src\fluorescence\world\weathereffect.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <Keyword>Win32Proj</Keyword>
@@ -516,18 +560,20 @@
     <IntDir>$(SolutionDir)..\..\..\..\_build\Fluorescence\_out$(PlatformArchitecture)-$(Configuration)</IntDir>
     <OutDir>$(SolutionDir)..\..\</OutDir>
     <TargetName>$(ProjectName)_win$(PlatformArchitecture)-d</TargetName>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;c:\python27\include;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86</LibraryPath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Python26\libs;</LibraryPath>
     <OutDir>$(SolutionDir)..\..\</OutDir>
     <IntDir>$(SolutionDir)..\..\..\..\_build\Fluorescence\_out$(PlatformArchitecture)-$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_win$(PlatformArchitecture)</TargetName>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;c:\python26\include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;BOOST_FILESYSTEM_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\..\include;.\..\..\src\fluorescence%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>c:\python27\include;.\..\include;.\..\..\src\fluorescence%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
